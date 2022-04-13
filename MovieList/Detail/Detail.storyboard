@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,56 +36,60 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GXY-2j-lQQ">
-                                <rect key="frame" x="15" y="352" width="384" height="21.5"/>
+                                <rect key="frame" x="15" y="359" width="47" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEm-Xa-CZW">
-                                <rect key="frame" x="15" y="381.5" width="384" height="21"/>
+                                <rect key="frame" x="15" y="397" width="384" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92n-qc-k3s">
-                                <rect key="frame" x="15" y="410.5" width="384" height="18"/>
+                                <rect key="frame" x="15" y="426" width="384" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSC-Nj-sMG">
-                                <rect key="frame" x="0.0" y="735" width="414" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Favourite">
-                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
-                                </buttonConfiguration>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njk-xF-9pi">
+                                <rect key="frame" x="369" y="359" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Png-ZY-S1w"/>
+                                    <constraint firstAttribute="height" constant="30" id="WX7-cO-cCj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
                                 <connections>
-                                    <action selector="didTapFavouriteButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qsV-3T-6QB"/>
+                                    <action selector="didTapFavouriteButton" destination="Y6W-OH-hqX" eventType="touchUpInside" id="kVu-0B-JPU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="92n-qc-k3s" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="6p9-Ig-dFX"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MSC-Nj-sMG" secondAttribute="trailing" id="EJC-64-BQP"/>
+                            <constraint firstItem="GXY-2j-lQQ" firstAttribute="top" secondItem="fhy-vZ-2Jw" secondAttribute="bottom" constant="15" id="1O8-nU-PFZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xEm-Xa-CZW" secondAttribute="trailing" constant="15" id="59I-7z-rm0"/>
+                            <constraint firstItem="njk-xF-9pi" firstAttribute="centerY" secondItem="GXY-2j-lQQ" secondAttribute="centerY" id="K0E-Xf-Iga"/>
                             <constraint firstItem="fhy-vZ-2Jw" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="LOS-VX-fNm"/>
-                            <constraint firstItem="xEm-Xa-CZW" firstAttribute="top" secondItem="GXY-2j-lQQ" secondAttribute="bottom" constant="8" id="M2O-kY-lb6"/>
+                            <constraint firstItem="92n-qc-k3s" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="NKJ-3v-hv6"/>
                             <constraint firstItem="fhy-vZ-2Jw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="PqX-o5-wmj"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="92n-qc-k3s" secondAttribute="trailing" constant="15" id="UHt-en-5sy"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GXY-2j-lQQ" secondAttribute="trailing" constant="15" id="ViQ-Wc-kKQ"/>
-                            <constraint firstItem="MSC-Nj-sMG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="XrH-ew-Gsy"/>
-                            <constraint firstItem="92n-qc-k3s" firstAttribute="top" secondItem="xEm-Xa-CZW" secondAttribute="bottom" constant="8" id="gNe-g1-iHa"/>
-                            <constraint firstItem="GXY-2j-lQQ" firstAttribute="top" secondItem="fhy-vZ-2Jw" secondAttribute="bottom" constant="8" symbolic="YES" id="mF9-iZ-XN2"/>
+                            <constraint firstItem="92n-qc-k3s" firstAttribute="top" secondItem="xEm-Xa-CZW" secondAttribute="bottom" constant="8" id="QcQ-jA-XrU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="92n-qc-k3s" secondAttribute="trailing" constant="15" id="Z5Q-d3-ocP"/>
+                            <constraint firstItem="xEm-Xa-CZW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="fs2-6o-nx2"/>
                             <constraint firstItem="fhy-vZ-2Jw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ovZ-B1-xcg"/>
-                            <constraint firstItem="GXY-2j-lQQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="pDZ-iZ-qvn"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xEm-Xa-CZW" secondAttribute="trailing" constant="15" id="wzY-an-4p0"/>
-                            <constraint firstItem="xEm-Xa-CZW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="x10-qo-JCj"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="MSC-Nj-sMG" secondAttribute="bottom" constant="96" id="xaB-2c-KQ7"/>
+                            <constraint firstItem="GXY-2j-lQQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="rZD-kZ-bTs"/>
+                            <constraint firstItem="xEm-Xa-CZW" firstAttribute="top" secondItem="GXY-2j-lQQ" secondAttribute="bottom" constant="8" id="raZ-R8-ehm"/>
+                            <constraint firstItem="njk-xF-9pi" firstAttribute="top" secondItem="fhy-vZ-2Jw" secondAttribute="bottom" constant="15" id="ukA-7Z-IHC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="njk-xF-9pi" secondAttribute="trailing" constant="15" id="xb8-01-VZ5"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="favouriteButton" destination="MSC-Nj-sMG" id="zoq-he-GVz"/>
+                        <outlet property="favouriteButton" destination="njk-xF-9pi" id="Knf-Z6-Qb7"/>
                         <outlet property="imageMovie" destination="KdH-Ef-3TG" id="Nxw-0a-Bs1"/>
                         <outlet property="overView" destination="92n-qc-k3s" id="U5q-dG-vaP"/>
                         <outlet property="titleLabel" destination="GXY-2j-lQQ" id="lhR-Lf-OBe"/>
@@ -97,11 +102,11 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

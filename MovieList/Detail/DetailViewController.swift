@@ -24,6 +24,9 @@ final class DetailViewController: UIViewController {
     var userPreference = UserPreference.shared
     weak var delegate: DetailViewControllerDelegate?
     
+    private let likeMovie = UIImage(named: "heart_red")
+    private let unlikeMovie = UIImage(named: "heart")
+    
     // MARK: - Object lifecycle
 
     override func awakeFromNib() {
@@ -59,7 +62,7 @@ final class DetailViewController: UIViewController {
         imageMovie.downloadImage(from: URL(string: fullUrl)!)
         let movieFav = userPreference.getMoviesFavourite()
         if movieFav == nil {
-            favouriteButton.setTitle("Favourite", for: .normal)
+            favouriteButton.setImage(unlikeMovie, for: .normal)
             favourite = false
         } else if movieFav != nil {
             movieFav?.results.forEach({ result in
@@ -69,9 +72,9 @@ final class DetailViewController: UIViewController {
             })
             
             if favourite {
-                favouriteButton.setTitle("Unfavourite", for: .normal)
+                favouriteButton.setImage(likeMovie, for: .normal)
             } else {
-                favouriteButton.setTitle("Favourite", for: .normal)
+                favouriteButton.setImage(unlikeMovie, for: .normal)
             }
         }
     }
@@ -82,12 +85,12 @@ final class DetailViewController: UIViewController {
     
     @IBAction private func didTapFavouriteButton() {
         if !favourite {
-            favouriteButton.setTitle("Unfavourite", for: .normal)
+            favouriteButton.setImage(likeMovie, for: .normal)
             userPreference.setMoviesResult(moviesResponse: interactor.moviesResponse,
                                            data: interactor.data)
             favourite = true
         } else {
-            favouriteButton.setTitle("Favourite", for: .normal)
+            favouriteButton.setImage(unlikeMovie, for: .normal)
             userPreference.removeMoviesResult(overview: interactor.data.overview)
             favourite = false
         }
