@@ -5,7 +5,7 @@ Hi everyone! I'm Pook or you can call me Supakorn Siripisitwong. I'm studying in
 This project is created by Pook Supakorn Siripisitwong. I spent 1 weeks to done MovieList project.
 
 # Reason why created MovieList
-The reason is to learn the creating process of the famous application. I had gained many experences for creating MivieList project.For example, how to setup constraints, how to use TableView, how to use custom class in storyboard or XIB, how to use custom cell when creating TableView or CollectionView, how to call endpoint with URLSession, how to make the clean code by using CleanSwift architecture, how to create search bar, and how to create Extension of UIKIT such as UIImageView, I can easily use any components in Storyboard and also programmatically any components in the code.
+The reason is to learn the creating process of the famous application. I had gained many experences for creating MovieList project.For example, how to setup constraints, how to use TableView, how to use custom class in storyboard or XIB, how to use custom cell when creating TableView or CollectionView, how to call endpoint with URLSession, how to make the clean code by using CleanSwift architecture, how to create search bar, and how to create Extension of UIKIT such as UIImageView, I can easily use any components in Storyboard and also programmatically any components in the code.
 
 # Done Feature
 - Search Movie
