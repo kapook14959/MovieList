@@ -13,8 +13,8 @@ struct MovieListResponse: Codable {
 }
 
 struct MovieListResult: Codable {
-    let posterPath: String
-    let releaseDate: String
+    let posterPath: String?
+    let releaseDate: String?
     let voteAverage: Float
     let originalTitle: String
     let overview: String

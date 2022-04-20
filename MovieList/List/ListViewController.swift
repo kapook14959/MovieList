@@ -67,9 +67,9 @@ extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListCell", for: indexPath) as? ListTableViewCell,
               let results = interactor.data?.results[indexPath.row] else { return UITableViewCell() }
-        let model = ListTableViewCellModel(imagePath: results.posterPath,
+        let model = ListTableViewCellModel(imagePath: results.posterPath ?? "",
                                            title: results.title,
-                                           releaseDate: results.releaseDate,
+                                           releaseDate: results.releaseDate ?? "",
                                            detail: results.overview)
         cell.updateUI(model: model)
         return cell
